@@ -30,10 +30,10 @@ img.src = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBA
 let imgReady = false; img.onload = () => imgReady = true;
 
 const B = { x: 96, y: H/2, r: 27, vy: 0 };
-const GRAV = 1500, FLAP = -440, MAXFALL = 620;
+const GRAV = 1380, FLAP = -425, MAXFALL = 580;
 let pipes = [], score = 0, best = +(localStorage.getItem('flappyOvBest') || 0);
 let state = 'ready', last = 0, spawnT = 0, deadT = 0;
-const PIPE_W = 74, GAP = 168, SPEED = 168, SPAWN = 1.45;
+const PIPE_W = 74, GAP = 192, SPEED = 152, SPAWN = 1.6;
 let stars = Array.from({length: 60}, () => ({x: Math.random()*W, y: Math.random()*(H-GROUND), s: Math.random()*2+0.5}));
 
 function reset() { B.y = H/2; B.vy = 0; pipes = []; score = 0; spawnT = 0.7; }
